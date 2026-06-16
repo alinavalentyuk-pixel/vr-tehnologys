@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="VR, VR окуляри, віртуальна реальність">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Сфери використання</title>
+		<link rel="icon" type="image/x-icon" href="img/favicon.png">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body>
+		<div class="name">
+	        	<p><h1 style="font-size:50px;">VR-ТЕХНОЛОГІЇ</h1></p>
+		</div>
+
+		<div class="nav">
+	        	<a href="index.html">Про VR</a>
+  			<a href="index2.html">Новини</a>
+  			<a href="index3.html">Сфери використання</a>
+			<a href="index4.html">VR-розваги міста</a>
+		</div>
+
+		<div class="header">
+	        	<div>
+				<img src="img/img12.gif" width="350" height="200">
+			</div>
+		</div>
+		
+		<div class="content2">			
+			<div>
+				<h3>Медицина</h3>
+				<hr>
+				<p>VR дозволяє лікарям та медичному персоналу виконувати вправи
+				та тренування у віртуальному середовищі. Це дозволяє практикувати
+				хірургічні процедури, вивчати анатомію та покращувати навички без
+				ризику для пацієнтів. Крім того, VR використовується для психотерапії,
+				реабілітації пацієнтів та відновлення моторики.
+				
+				<h3>Освіта</h3>
+				<hr>
+				<p>У сфері освіти VR надає можливість створення інтерактивних
+				навчальних курсів та симуляцій. Це допомагає учням краще засвоювати
+				матеріал, відчувати практичний досвід та ефективно навчатися у віртуальних
+				лабораторіях та середовищах.
+
+				<h3>Ігри та розваги</h3>
+				<hr>
+				<p>Одним з найпопулярніших застосувань VR є геймінг. VR-ігри дозволяють 
+				користувачам погрузитися у захоплюючі іммерсивні світи та взаємодіяти з
+				ними за допомогою віртуального обладнання, такого як шоломи та контролери.
+				Крім того, VR використовується у віртуальних парках розваг та інтерактивних
+				атракціонах.
+			
+				<div id="carousel" class="carousel">
+					<button class="arrow prev"> < </button>
+						<div class="gallery">
+							<ul>
+								<li><img src="img/img32.jpg"></li>
+								<li><img src="img/img33.jpg"></li>
+								<li><img src="img/img34.jpg"></li>
+								<li><img src="img/img35.jpg"></li>
+								<li><img src="img/img36.jpg"></li>
+								<li><img src="img/img37.jpg"></li>
+							</ul>
+						</div>
+					<button class="arrow next"> > </button>
+				</div>
+
+				<script>
+					let i = 1;
+					for(let li of carousel.querySelectorAll('li')) {
+						li.style.position = 'relative';
+						li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+						i++;
+					}
+
+
+					let width = 500;
+					let count = 1;
+
+					let list = carousel.querySelector('ul');
+					let listElems = carousel.querySelectorAll('li');
+
+					let position = 0;
+
+					carousel.querySelector('.prev').onclick = function() {
+      						position += width * count;
+						position = Math.min(position, 0)
+						list.style.marginLeft = position + 'px';
+					};
+
+					carousel.querySelector('.next').onclick = function() {
+						position -= width * count;
+						position = Math.max(position, -width * (listElems.length - count));
+						list.style.marginLeft = position + 'px';
+					};
+				</script>
+		
+				<h3>Дизайн та архітектура</h3>
+				<hr>
+				<p>У сфері архітектури та дизайну VR дозволяє архітекторам, дизайнерам та
+				клієнтам відчувати простір та об'єм проекту ще до його фізичної реалізації.
+				Це допомагає виявляти та виправляти помилки, ефективно працювати над дизайном
+				та покращувати співпрацю між всіма сторонами проекту.
+
+				<h3>Туризм та культурна спадщина</h3>
+				<hr>
+				<p>VR використовується для віртуальних турів, що дозволяє користувачам
+				відвідувати віддалені місця та пам'ятки світу без фізичного присутності.
+				Це розширює можливості туризму та дозволяє зберегти та ділитися культурною
+				спадщиною.
+				
+				<h3>Спорт</h3>
+				<hr>
+				<p>VR використовується у спорті для тренування спортсменів, вивчення та
+				аналізу технік гри, а також для створення іммерсивних спортивних вражень
+				для глядачів.
+				
+				<p align="center"><video width="280" controls>
+  				<source src="vid/video1.mp4" type="video/mp4">
+  				<source src="vid/video1.ogg" type="video/ogg">
+				Ваш браузер не підтримує відео HTML.
+				</video>
+
+				<p align="center">Відео надано <a href="https://www.tiktok.com/@danvork777/video/7198418527701765419?is_from_webapp=1&sender_device=pc&web_id=7427562508552488480" target="_blank">tiktok.com/@danvork777</a>.
+
+			</div>
+
+		</div>
+		<div class="footer">
+	        	<p>Адміністратор сайту: Ілля ЯСТРУБ<br>
+			© 2026 | VR-технології | м. Хмельницький
+			</p>
+		</div>
+	</body>
+</html>
